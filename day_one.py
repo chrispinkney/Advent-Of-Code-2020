@@ -201,10 +201,21 @@ nums = [
     1925,
 ]
 
+# Part One
+print(f"Part One:")
+for num in nums:
+    for i in nums:
+        sum = num + i
+        if sum == 2020:
+            print(f"{num} + {i} = {num + i}")
+            print(f"{num} * {i} = {num * i}")
+
+# Part Two
+print(f"\nPart Two:")
 for num in nums:
     for i in nums:
         for j in nums:
             sum = num + i + j
             if sum == 2020:
-                print(f"{num} + {i}  + {j} = {num + i + j}")
+                print(f"{num} + {i} + {j} = {num + i + j}")
                 print(f"{num} * {i} * {j} = {num * i * j}")

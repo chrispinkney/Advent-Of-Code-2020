@@ -201,21 +201,27 @@ nums = [
     1925,
 ]
 
-# Part One
-print(f"Part One:")
-for num in nums:
-    for i in nums:
-        sum = num + i
-        if sum == 2020:
-            print(f"{num} + {i} = {num + i}")
-            print(f"{num} * {i} = {num * i}")
 
-# Part Two
-print(f"\nPart Two:")
-for num in nums:
-    for i in nums:
-        for j in nums:
-            sum = num + i + j
+def d1():
+    # Part One
+    sum = 0
+    print(f"Part One:")
+    for num in nums:
+        for i in nums:
+            sum = num + i
             if sum == 2020:
-                print(f"{num} + {i} + {j} = {num + i + j}")
-                print(f"{num} * {i} * {j} = {num * i * j}")
+                print(f"{num} + {i} = {num + i}")
+                print(f"{num} * {i} = {num * i}")
+                print(f"So the answer to part 1 is: {num * i}")
+
+    # Part Two
+    sum = 0
+    print(f"\nPart Two:")
+    for num in nums:
+        for i in nums and sum != 2020:
+            for j in nums:
+                sum = num + i + j
+                if sum == 2020:
+                    print(f"{num} + {i} + {j} = {num + i + j}")
+                    print(f"{num} * {i} * {j} = {num * i * j}")
+                    print(f"So the answer to part 2 is: {num * i * j}")
